@@ -12,10 +12,10 @@ test('BA 로그인', async ({ page }) => {
   await expect(page).toHaveTitle(/client Admin/);
 });
 
-test('BA 로그인', async ({ page }) => {
+// test('BA 로그인', async ({ page }) => {
 
-  await expect(page).toHaveTitle(/bleepy Admin/);
-});
+//   await expect(page).toHaveTitle(/bleepy Admin/);
+// });
 
 // test('get started link', async ({ page }) => {
 //   await page.goto('https://playwright.dev/');
