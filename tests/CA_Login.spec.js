@@ -5,10 +5,15 @@
 import { test, expect } from '@playwright/test' // -> ES module
 
 test('BA 로그인', async ({ page }) => {
-  await page.goto('https://stg-admin.bleepy.io/login');
-  await page.getByPlaceholder('계정 이메일').fill('super@radlab.kr');
-  await page.getByPlaceholder('비밀번호').fill('super@radlab.kr');
+  await page.goto('https://stg-client-admin.bleepy.io/login');
+  await page.getByPlaceholder('계정 이메일').fill('test_wsjeon700@yopmail.com');
+  await page.getByPlaceholder('비밀번호').fill('Test123!');
   await page.getByRole('button', { name: '로그인' }).click();
+  await expect(page).toHaveTitle(/client Admin/);
+});
+
+test('BA 로그인', async ({ page }) => {
+
   await expect(page).toHaveTitle(/bleepy Admin/);
 });
 
